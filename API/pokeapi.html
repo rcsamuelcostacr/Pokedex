@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>POKÉDEX</title>
+</head>
+<body>
+    <main class="d-flex main centent-center itens-center content-center direction-column">
+        <section class="d-flex centent-center itens-center content-center section-pokemon direction-column">
+            <div class="d-flex centent-center itens-center content-center direction-column area-pesquisa">
+                <h3 class="informacao">Realize sua busca por pokémon pelo nome do pokémon que deseja ou número no pokédex</h3>
+                <div class=" d-flex centent-center itens-center content-center pesquisa">
+                    <form id="form" class="d-flex">
+                        <input type="text" id="pesquisaPokemon">
+                        <input type="submit" value="Pesquisar" class="btn btn-submit" id="btn-pesquisar">
+                    </form>
+                </div>
+            </div>
+            
+            <span class="d-flex flex-wrap content-center" id="pokemonContainer"></span>
+            
+            
+            <button type="submit" id="morePokemon" class="btn btn-morePokemon">Carregar mais Pokémons</button>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="list-pokemon" id="listPokemon">
+            <span id="imagePokemon" class="d-flex centent-center itens-center content-center"></span>
+            <span id="idPokemon"></span>
+            <span id="nomePokemon" class="d-flex itens-center "></span>
+            <span id="tipoPokemon"></span>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/api.js"></script>
+</body>
+</html>
